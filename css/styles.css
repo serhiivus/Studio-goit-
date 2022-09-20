@@ -12,13 +12,15 @@
   --filter-button-hover-background: #2196f3;
   --footer-adress-color: #ffffff;
   --footer-contact-color: rgba(255, 255, 255, 0.6);
+  --header-logo-color: #000;
+  --footer-logo-color: #fff;
+  --logo-color: #2196f3;
 }
 
-}
-body {
+ body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
-}
+} 
 ul {
   list-style: none;
 }
@@ -29,19 +31,41 @@ a {
 address {
   font-style: normal;
 }
+
+.visually-hidden { 
+  color: rgba(0, 0, 0, 0); 
+  position: absolute; 
+  width: 1px; 
+  height: 1px; 
+  margin: -1px; 
+  border: 0; 
+  padding: 0; 
+  white-space: nowrap;
+   clip-path: inset(100%); 
+  clip: rect(0 0 0 0); 
+  overflow: hidden;}
+
 /* header */
 .header {
 }
+
+.header .logo{
+  color: var(--header-logo-color);
+}
+
+.footer .logo{
+  color: var(--footer-logo-color);
+}
+
 .logo {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: #000;
 }
 .logo span {
-  color: #2196f3;
+  color: var(--logo-color);
 }
 .header-menu {
 }
@@ -163,8 +187,7 @@ address {
   color: var(--filter-button-hover-color);
   background:var(--filter-button-hover-background);
 }
-.samples {
-}
+
 .samples-list {
 }
 .sample {
@@ -203,3 +226,7 @@ address {
   letter-spacing: 0.03em;
   color: var(--footer-contact-color);
 }
+
+.footer-adress:hover, .footer-contact:hover{
+color: var(--text-color-hover);
+}   
